@@ -15,6 +15,7 @@ pipeline {
             steps{
                 build job: 'Deploy_Package_In_Mystaging'
             }
-         }
+         } 
+       }
     }
 }
