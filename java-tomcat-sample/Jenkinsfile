@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy in Staging Environment'){
             steps{
-                build job: 'Deploy_Package_In_Mystaging'
+		build job: 'Deploy_Package_In_Mystaging', parameters: [string(name: 'Actual_Code_Pipeline', value: env.BRANCH_NAME)]
              }
         }
         stage('Deploy to Production'){
